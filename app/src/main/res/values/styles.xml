@@ -1,8 +1,24 @@
 <resources>
 
-    <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
-        <!-- Customize your theme here. -->
+    <style name="AppTheme" parent="android:Theme.DeviceDefault.Light">
+        <item name="android:colorBackground">
+            <strong>@color/background_aplicacion</strong>
+        </item>
+        <item name="android:windowBackground">@color/bg_app</item>
     </style>
+
+    <style name="normal_text">
+        <item name="android:textColor">@color/text_app_color</item>
+        <item name="android:textSize">@dimen/normal_text</item>
+        <item name="android:singleLine">false</item>
+    </style>
+
+    <style name="bold_text" parent="normal_text">
+        <item name="android:textStyle">bold</item>
+    </style>
+    <style name="title" parent="bold_text">
+        <item name="android:textSize">@dimen/title_text</item>
+    </style>
+
 
 </resources>

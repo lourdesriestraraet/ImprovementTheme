@@ -3,7 +3,6 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 22
     buildToolsVersion "22.0.1"
-
     defaultConfig {
         applicationId "es.raet.lourdesriestra.improvementtheme"
         minSdkVersion 16
@@ -12,14 +11,37 @@ android {
         versionName "1.0"
     }
     buildTypes {
+        def STRING = "String"
+        def BOOLEAN = "boolean"
+        def TRUE = "true"
+        def FALSE = "false"
+        def IS_DEBUG = "IS_DEBUG"
+        def JSON_URL ="JSON_URL"
+        def URL_JSON_IMPROVEMENT_DEV = "\"https://www.dropbox.com/s/ci0fl3djw4ghj2i/document.json?raw=1\""
+        def URL_JSON_IMPROVEMENT_REL = "\"https://www.dropbox.com/s/ci0fl3djw4ghj2i/document.json?raw=1\""
         release {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField BOOLEAN, IS_DEBUG, FALSE
+            buildConfigField STRING, JSON_URL, URL_JSON_IMPROVEMENT_REL
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            buildConfigField BOOLEAN, IS_DEBUG, TRUE
+            buildConfigField STRING, JSON_URL, URL_JSON_IMPROVEMENT_DEV
+        }
+    }
+    productFlavors {
+        bluecolor {
+        }
+        greencolor {
         }
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile fileTree(include: ['*.jar'], dir: 'libs')
     compile 'com.android.support:appcompat-v7:22.2.0'
+    compile 'com.google.code.gson:gson:2.3.1'
 }
