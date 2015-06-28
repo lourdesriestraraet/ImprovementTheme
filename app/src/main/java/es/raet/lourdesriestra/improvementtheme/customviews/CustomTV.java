@@ -13,6 +13,22 @@ public class CustomTV extends TextView {
 		initFont(null);
 	}
 
+	public CustomTV(Context context, AttributeSet attrs) {
+		super(context, attrs);
+		initFont(attrs);
+	}
+
+	public CustomTV(Context context, AttributeSet attrs, int defStyleAttr) {
+		super(context, attrs, defStyleAttr);
+		initFont(attrs);
+	}
+
+	@TargetApi(Build.VERSION_CODES.LOLLIPOP)
+	public CustomTV(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
+		super(context, attrs, defStyleAttr, defStyleRes);
+		initFont(attrs);
+	}
+
 	private void initFont(AttributeSet attributeSet) {
 		final Typeface normalFont = Font.getNormalFont();
 		final Typeface boldFont = Font.getBlodFont();
@@ -28,22 +44,6 @@ public class CustomTV extends TextView {
 		} else {
 			this.setTypeface(normalFont);
 		}
-	}
-
-	public CustomTV(Context context, AttributeSet attrs) {
-		super(context, attrs);
-		initFont(attrs);
-	}
-
-	public CustomTV(Context context, AttributeSet attrs, int defStyleAttr) {
-		super(context, attrs, defStyleAttr);
-		initFont(attrs);
-	}
-
-	@TargetApi(Build.VERSION_CODES.LOLLIPOP)
-	public CustomTV(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
-		super(context, attrs, defStyleAttr, defStyleRes);
-		initFont(attrs);
 	}
 
 }

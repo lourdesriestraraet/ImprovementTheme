@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Desde aqui texto claro -->
+    <color name="C900">#1a237e</color>
+    <color name="C800">#283593</color>
+    <color name="C700">#303f9f</color>
+    <color name="C600">#3949ab</color>
+    <color name="C500">#3f51b5</color>
+    <color name="C400">#5c6bc0</color>
+    <color name="C300">#7986cb</color>
+    <!--desde aqui texto en oscuro -->
+    <color name="C200">#9fa8da</color>
+    <color name="C100">#c5cae9</color>
+    <color name="C050">#e8eaf6</color>
+
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+
+    <!-- Colores de la aplicación -->
+    <color name="shadow">#CCCCCC</color>
+    <color name="error">#E11914</color>
+    <color name="ok">#4B6A83</color>
+
+    <!-- Bg color -->
+    <color name="bg_app">@color/C050</color>
+    <color name="text_app_color">@color/black</color>
+</resources>
